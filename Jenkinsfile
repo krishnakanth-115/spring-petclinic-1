@@ -62,8 +62,7 @@ pipeline {
             steps {
                 script{
                     withDockerRegistry(credentialsId: 'Docker_id') {
-                   sh 'ls -l spring-petclinic-1'
-                  sh 'docker build -t krishnakanthgoud/spring:2 -f spring-petclinic-1/Dockerfile spring-petclinic-1'
+                   sh 'docker build -t krishnakanthgoud/spring:2 .'
   
               }
 
