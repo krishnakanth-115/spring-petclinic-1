@@ -62,9 +62,8 @@ pipeline {
             steps {
                 script{
                     withDockerRegistry(credentialsId: 'Docker_id') {
-                        sh 'pwd'         // Print current directory
-                    sh 'ls -l'       // List files to debug
-                    sh 'docker build -t krishnakanthgoud/spring:2 .'
+                     
+                    sh 'docker build -t krishnakanthgoud/spring:2 -f spring-petclinic-1/Dockerfile'
 
                      }
 
