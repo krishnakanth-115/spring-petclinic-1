@@ -61,7 +61,7 @@ pipeline {
         stage('Docker image ') {
             steps {
                 script{
-                    withDockerRegistry(credentialsId: 'Docker_id', toolName: 'DOCKER') {
+                    withDockerRegistry(credentialsId: 'Docker_id') {
                         sh "docker build -t krishnakanthgoud/spring:2 ."
 
                      }
