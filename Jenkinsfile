@@ -62,7 +62,7 @@ pipeline {
             steps {
                 script{
                     withDockerRegistry(credentialsId: 'Docker_id') {
-                        sh "docker build -t krishnakanthgoud/spring:2"
+                        sh "docker build -t krishnakanthgoud/spring:2 ."
 
                      }
 
