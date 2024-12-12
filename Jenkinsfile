@@ -57,6 +57,21 @@ pipeline {
      )
     }
      } 
+        
+        stage('Docker image ') {
+            steps {
+                script{
+                    withDockerRegistry(credentialsId: 'Docker_id', toolName: 'DOCKER') {
+                        sh "docker build -t krishnakanthgoud/spring:latest"
+                        sh "docker push"
+
+                     }
+
+                }
+            
+            }
+        }
+
     
     }
 }
