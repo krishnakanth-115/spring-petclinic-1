@@ -62,7 +62,9 @@ pipeline {
             steps {
                 script{
                     withDockerRegistry(credentialsId: 'Docker_id') {
-                        sh "docker build -t krishnakanthgoud/spring:2 ."
+                        sh 'pwd'         // Print current directory
+                    sh 'ls -l'       // List files to debug
+                    sh 'docker build -t krishnakanthgoud/spring:2 .'
 
                      }
 
